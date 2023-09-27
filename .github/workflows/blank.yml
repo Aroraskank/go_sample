@@ -37,7 +37,9 @@ jobs:
           go mod init sample
           go mod tidy
           go get -u golang.org/x/lint/golint
-          ls
+          export PATH=(go list -f {{.Target}} golang.org/x/lint/golint):$PATH
+          echo $PATH
+          
           go vet .
           go lint .
           go test -v
