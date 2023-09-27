@@ -36,12 +36,7 @@ jobs:
           go version
           go mod init sample
           go mod tidy
-          go get -u golang.org/x/lint/golint
-          lintpath = go list -f {{.Target}} golang.org/x/lint/golint
-          export PATH=$lintpath:$PATH
-          echo $PATH
           
           go vet .
-          go lint .
           go test -v
       shell: bash 
