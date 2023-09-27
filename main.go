@@ -13,7 +13,7 @@ func main() {
 	json_data["zebra"] = "stripes"
 	json_content,err := json.Marshal(json_data)
 	fmt.Println(string(json_content))
+
 	
-	return
 }
 
