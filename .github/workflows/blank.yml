@@ -35,7 +35,10 @@ jobs:
           go version
           go mod init sample
           go mod tidy
-          
           go vet .
           go test -v
+
+    - uses: danhunsaker/golang-github-actions@v1.3.0
+    - name: check
+      run: all
       shell: bash 
