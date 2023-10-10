@@ -26,6 +26,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
 
+    - uses: danhunsaker/golang-github-actions@v1.3.0
+    - name: check
+      run: all
+
     - name: Set Go environment Install all the dependencies
       run: |
           whoami
@@ -37,8 +41,4 @@ jobs:
           go mod tidy
           go vet .
           go test -v
-
-    - uses: danhunsaker/golang-github-actions@v1.3.0
-    - name: check
-      run: all
       shell: bash 
