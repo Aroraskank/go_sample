@@ -37,7 +37,7 @@ jobs:
           go mod tidy
           go get honnef.co/go/tools/cmd/staticcheck
           go install honnef.co/go/tools/cmd/staticcheck
-          staticcheck .
+          go staticcheck .
           go vet .
           go test -v
       shell: bash 
