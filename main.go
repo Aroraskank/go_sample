@@ -3,7 +3,6 @@ import "fmt"
 
 
 func main(){
-  fmt.Println("Hello")
-  Blankfunction()    
+  fmt.Println("Hello")   
   
 }
