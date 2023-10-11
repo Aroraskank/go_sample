@@ -39,7 +39,7 @@ jobs:
           go install honnef.co/go/tools/cmd/staticcheck
           export GOPATH="$HOME/go"
           export PATH="$GOPATH/bin:$PATH"
-          go staticcheck .
+          staticcheck .
           go vet .
           go test -v
       shell: bash 
